@@ -5,6 +5,7 @@ import requests
 from dotenv import load_dotenv
 import os
 
+#CRIE UM ARQUIVO .ENV PARA CARREGAR SEU "CLIENT_ID" E "CLIENT_SECRET"
 load_dotenv()
 #----------------- SPOTIFY -----------------#
 CLIENT_ID = os.getenv("CLIENT_ID")
