@@ -76,7 +76,7 @@ Este projeto permite que o usuário viaje no tempo para um ano específico e cri
    ```
    2000-08-12
    ```
-3. O programa cria uma playlist chamada `2000 Billboard 100` no Spotify com as músicas disponíveis.
+3. O programa cria uma playlist chamada `2000-08-12 Billboard 100` no Spotify com as músicas disponíveis.
 
 ## Licença
 
