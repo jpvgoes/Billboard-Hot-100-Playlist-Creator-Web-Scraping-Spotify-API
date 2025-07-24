@@ -1,83 +1,85 @@
 # Scraping the Billboard Hot 100 and Creating a Spotify Playlist
 
-## Descrição do Projeto
+## Project Description
 
-Este projeto permite que o usuário viaje no tempo para um ano específico e crie uma playlist no Spotify com as músicas do **Billboard Hot 100** daquele ano. Ele utiliza as bibliotecas **BeautifulSoup**, **Requests** e **Spotipy** para realizar as seguintes etapas:
+This project allows the user to travel back in time to a specific year and create a Spotify playlist with the songs from the **Billboard Hot 100** for that year. It uses the **BeautifulSoup**, **Requests**, and **Spotipy** libraries to perform web scraping and automate playlist creation.
 
-### Funcionalidades
+### Features
 
-1. **Entrada do Usuário**:
-   - O usuário insere uma data no formato `YYYY-MM-DD` para escolher o ano desejado.
+1. **User Input**:
+   - The user enters a date in the format `YYYY-MM-DD` to choose the desired year.
 
-2. **Web Scraping do Billboard Hot 100**:
-   - O programa acessa o site da Billboard e extrai os nomes das 100 músicas mais populares na data fornecida.
+2. **Billboard Hot 100 Web Scraping**:
+   - The program accesses the Billboard website and extracts the names of the 100 most popular songs on the given date.
 
-3. **Integração com o Spotify**:
-   - Utilizando a API do Spotify, o programa:
-     - Autentica o usuário.
-     - Busca as músicas extraídas no Spotify.
-     - Cria uma playlist privada no Spotify com as músicas encontradas.
+3. **Spotify Integration**:
+   - Using the Spotify API, the program:
+     - Authenticates the user.
+     - Searches for the extracted songs on Spotify.
+     - Creates a private Spotify playlist with the found songs.
 
-4. **Criação da Playlist**:
-   - As músicas encontradas são adicionadas à playlist criada no Spotify.
+4. **Playlist Creation**:
+   - The found songs are added to the newly created playlist on Spotify.
 
-### Fluxo do Programa
+### Program Flow
 
-1. O usuário insere uma data válida no formato `YYYY-MM-DD`.
-2. O programa valida a data e realiza uma requisição ao site da Billboard para obter as músicas do **Hot 100**.
-3. As músicas são buscadas no Spotify, e as que forem encontradas são adicionadas a uma nova playlist privada.
-4. Ao final, o programa exibe uma mensagem confirmando a criação da playlist.
+1. The user enters a valid date in the format `YYYY-MM-DD`.
+2. The program validates the date and makes a request to the Billboard website to get the **Hot 100** songs.
+3. The songs are searched on Spotify, and those found are added to a new private playlist.
+4. At the end, the program displays a message confirming the creation of the playlist.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Python**: Linguagem principal do projeto.
-- **BeautifulSoup**: Para realizar o web scraping e extrair os dados do site da Billboard.
-- **Requests**: Para realizar requisições HTTP ao site da Billboard.
-- **Spotipy**: Para integração com a API do Spotify e automação da criação de playlists.
+- **Python**: Main language of the project.
+- **BeautifulSoup**: For web scraping and extracting data from the Billboard website.
+- **Requests**: For making HTTP requests to the Billboard website.
+- **Spotipy**: For integration with the Spotify API and automating playlist creation.
 
-## Pré-requisitos
+## Prerequisites
 
 1. **Spotify Developer Account**:
-   - Crie um aplicativo no [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/) para obter o `CLIENT_ID` e o `CLIENT_SECRET`.
+   - Create an app on the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/) to obtain your `CLIENT_ID` and `CLIENT_SECRET`.
 
-2. **Instalar as Dependências**:
-   - Execute o seguinte comando para instalar as bibliotecas necessárias:
+2. **Install Dependencies**:
+   - Run the following command to install the required libraries:
      ```bash
      pip install requests beautifulsoup4 spotipy
      ```
 
-3. **Configurar o Ambiente**:
-   - Substitua as variáveis `CLIENT_ID` e `CLIENT_SECRET` no código pelos valores obtidos no Spotify Developer Dashboard.
+3. **Set Up the Environment**:
+   - Replace the `CLIENT_ID` and `CLIENT_SECRET` variables in the code with the values obtained from the Spotify Developer Dashboard.
 
-## Como Executar o Projeto
+## How to Run the Project
 
-1. Clone ou baixe este repositório.
-2. Navegue até o diretório do projeto.
-3. Execute o script `main.py`:
+1. Clone or download this repository.
+2. Navigate to the project directory.
+3. Run the `main.py` script:
    ```bash
    python main.py
    ```
-4. Insira uma data no formato `YYYY-MM-DD` quando solicitado.
-5. Faça login no Spotify quando o navegador abrir.
-6. Aguarde a criação da playlist e confira no seu perfil do Spotify.
+4. Enter a date in the format `YYYY-MM-DD` when prompted.
+5. Log in to Spotify when the browser opens.
+6. Wait for the playlist to be created and check your Spotify profile.
 
-## Observações
+## Notes
 
-- Nem todas as músicas do Billboard Hot 100 podem estar disponíveis no Spotify. O programa informará quais músicas foram ignoradas.
-- Certifique-se de que o `CLIENT_ID` e o `CLIENT_SECRET` estão corretos para evitar erros de autenticação.
+- Not all Billboard Hot 100 songs may be available on Spotify. The program will inform you which songs were skipped.
+- Make sure your `CLIENT_ID` and `CLIENT_SECRET` are correct to avoid authentication errors.
 
-## Exemplo de Uso
+## Usage Example
 
-1. O programa solicita:
+1. The program prompts:
    ```
-   Wich year do you want to travel to? Type the date in this format YYYY-MM-DD:
+   Which year do you want to travel to? Type the date in this format YYYY-MM-DD:
    ```
-2. O usuário insere:
+2. The user enters:
    ```
    2000-08-12
    ```
-3. O programa cria uma playlist chamada `2000-08-12 Billboard 100` no Spotify com as músicas disponíveis.
+3. The program creates a playlist named `2000-08-12 Billboard 100` on Spotify with the available songs.
 
-## Licença
+## License
 
-Este projeto é apenas para fins educacionais e não deve ser usado para fins comerciais.
+This project is for educational purposes only and should not be used for commercial purposes.
+
+---
